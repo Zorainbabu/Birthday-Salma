@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <!-- Urdu Font: Jameel Noori Nastaleeq Khaseeda -->
+  <link href="https://cdn.jsdelivr.net/gh/KingAftab/nastaleeq-fonts@main/jameel-noori-nastaleeq-khaseeda.css" rel="stylesheet">
+  <!-- Signature Style Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-top: 50px;
+      animation: glow 2s infinite alternate;
+    }
+    h2 {
+      font-size: 2em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff0; }
+      to { text-shadow: 0 0 20px #f0f, 0 0 30px #0ff; }
+    }
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      background: red;
+      border-radius: 50%;
+      bottom: -150px;
+      animation: float 6s infinite ease-in;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-800px); }
+    }
+    .shayari {
+      margin-top: 30px;
+      font-family: 'Jameel Noori Nastaleeq Khaseeda', serif;
+      font-size: 26px;
+      color: #fff;
+      direction: rtl;
+      line-height: 2;
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .signature {
+      margin-top: 40px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 38px;
+      color: yellow;
+      text-shadow: 0 0 10px rgba(255,255,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday 🎂</h1>
+  <h2>Dear <span style="color:yellow;">💖 Chocolaty Salma 💖</span></h2>
+  <p style="color:white; font-size:20px;">Wishing you lots of happiness, love & success 🎉</p>
+
+  <!-- Urdu Shayari Section -->
+  <div class="shayari">
+    آنکھوں میں تاروں سی چمک ہونٹوں پر مسکان رہے <br>
+    بھرا دامن رہے خوشیوں سے کھلا چاند سا یہ مکھڑا رہے <br>
+    تمام امیدیں ہوں پوری آپ کی نہ کوئی دل میں ارمان رہے <br>
+    بنیں پھول رہگزر آپ کے ، منزل آپ کی شاد رہے <br>
+    حرف آخر میں یہ دعا ہے خدا سے <br>
+    کہ اس کی رحمت سدا آپ کے ساتھ رہے
+  </div>
+
+  <!-- Signature Section -->
+  <div class="signature">
+    ~ Aftab Noor ✍️
+  </div>
+
+  <script>
+    // Balloons generator
+    for(let i=0; i<20; i++){
+      let b = document.createElement("div");
+      b.className = "balloon";
+      b.style.left = Math.random()*100+"%";
+      b.style.background = "hsl(" + Math.random()*360 + ", 80%, 60%)";
+      b.style.animationDuration = (4 + Math.random()*4) + "s";
+      document.body.appendChild(b);
+    }
+  </script>
+</body>
+</html>
